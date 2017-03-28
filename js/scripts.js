@@ -12,17 +12,23 @@ $(document).ready(function() {
 
     for (i = 0; i <= (tmpArray.length - 1) ; i++) {
 
-      if (tmpArray[i] != ("a" || "A")) {
-        noAsArray.push(tmpArray[i]);
+      if ( (tmpArray[i] === "a") || (tmpArray[i] === "A") )  {
+        noAsArray.push("-");
+      } else if ( (tmpArray[i] === "e") || (tmpArray[i] === "E") ) {
+        noAsArray.push("-");
+      } else if ( (tmpArray[i] === "i") || (tmpArray[i] === "I") ) {
+        noAsArray.push("-");
+      } else if ( (tmpArray[i] === "o") || (tmpArray[i] === "O") ) {
+        noAsArray.push("-");
+      } else if ( (tmpArray[i] === "u") || (tmpArray[i] === "U") ) {
+        noAsArray.push("-");
       } else {
-        noAsArray.push("-")
+        noAsArray.push(tmpArray[i]);
       }
 
     }
 
     console.log("no As: " , noAsArray);
-
-
 
 
     $("#output1").text(startingSentence);
